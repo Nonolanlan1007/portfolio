@@ -1,26 +1,69 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <nav>
+    <router-link to="/" class="router-link">Acceuil</router-link>
+    <router-link to="/projects" class="router-link">Projets</router-link>
+  </nav>
+  <router-view/>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed&display=swap');
+
+body {
+  background: linear-gradient(270deg, #04354e, #0082ab);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 19s ease infinite;
+  -moz-animation: AnimationName 19s ease infinite;
+  -o-animation: AnimationName 19s ease infinite;
+  animation: AnimationName 19s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/*body {
+  background: linear-gradient(to right bottom, #0082AB, #04354E) fixed no-repeat
+}*/
+nav {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 25px;
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-size: 1.5em;
+}
+
+.router-link {
+  color: #bbb2b2;
+  text-decoration: none;
+  margin: 0 25px;
+  transition: all 0.3s;
+}
+
+.router-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-size: 2em;
 }
 </style>
