@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "VueJS",
+    "imgPath": "https://avatars.githubusercontent.com/u/6128107?s=200&v=4",
+    "description": "Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web. The is the best framework ever ! You can make a lot of things with it !",
+    "langs_frameworks": ["vuejs", "html", "css", "javascript", "mongodb", "typescript", "reactjs"],
+    "links": {
+      "website": "https://vuejs.org/",
+      "github": "https://github.com/vuejs/core",
+      "npm": "https://www.npmjs.com/package/vue",
+      "docs": "https://vuejs.org/v2/guide/",
+      "discord": "https://discordapp.com/invite/HBherRA"
+    },
+    "tags": [
+      {
+        "name": "npm",
+        "color": "#CB3837",
+        "logo": "https://cdn.worldvectorlogo.com/logos/npm.svg"
+      },
+      {
+        "name": "framework"
+      }
+    ],
+    "created_at": 1674052723809,
+    "otherDevs": [
+      {
+        "name": "Cool Man",
+        "github": "https://github.com/cool-man",
+        "avatar": "https://avatars.githubusercontent.com/u/6128107?s=200&v=4"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Awesome Project"
+  }
+]
