@@ -8,6 +8,9 @@
         v-bind:tags="project.tags"
         v-bind:description="project.description"
         v-bind:frameworks_langs="project.langs_frameworks"
+        v-bind:created_at="project.created_at"
+        v-bind:collaborators="project.contributors"
+        v-bind:id="project.id"
         :key="project.id"
     ></ProjectCard>
     <ProjectCard v-if="!projects || projects.length === 0" name="Zut! Il n'y a pour le moment aucuns projets affichés ici !"></ProjectCard>

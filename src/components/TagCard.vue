@@ -1,5 +1,5 @@
 <template>
-  <router-link v-bind:to="`/projects/tag/${encodeURI(name)}`" class="router-link">
+  <router-link v-bind:to="`/projets/tag/${encodeURI(name)}`" class="router-link">
     <div class="tag" v-bind:style="{ 'background-color': this.$props.color || this.$data.Color }">
       <img v-if="logo" v-bind:src="logo" alt="Tag logo" class="logo" />
       <p>
@@ -68,5 +68,9 @@ export default {
     padding: 5px;
     max-height: 35px;
     margin-left: 10px;
+  }
+
+  .tag:hover {
+    filter: opacity(0.8);
   }
 </style>

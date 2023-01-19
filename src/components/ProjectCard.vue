@@ -1,25 +1,45 @@
 <template>
-  <div class="card">
-    <img v-if="imgPath" v-bind:src="imgPath" alt="Project logo" class="logo" />
-    <div class="card-content">
-      <h1>
-        {{ name }}
-      </h1>
-      <div v-if="tags && tags.length > 0" class="tags">
-        <TagCard v-for="tag in tags.slice(0, 5)" v-bind:color="tag.color" v-bind:name="tag.name" v-bind:logo="tag.logo" :key="tag.name"></TagCard>
-      </div>
-      <h3 v-if="description">
-        {{ description.length > 200 ? description.slice(0, 201) + "..." : description }}
-      </h3>
-      <div v-if="frameworks_langs && frameworks_langs.length > 0" class="frameworks_langs">
-          <img v-for="framework in frameworks_langs" :key="framework" v-bind:src="chooseIcon(framework)" v-bind:alt="framework" />
+  <router-link class="router-link" v-bind:to="`/projets/${String(id)}`">
+    <div class="card">
+      <img v-if="imgPath" v-bind:src="imgPath" alt="Project logo" class="logo" />
+      <div class="card-content">
+        <h1>
+          {{ name }}
+        </h1>
+        <div v-if="tags && tags.length > 0" class="tags">
+          <TagCard v-for="tag in tags.slice(0, 5)" v-bind:color="tag.color" v-bind:name="tag.name" v-bind:logo="tag.logo" :key="tag.name"></TagCard>
+        </div>
+        <h3 v-if="description">
+          {{ description.length > 200 ? description.slice(0, 201) + "..." : description }}
+        </h3>
+        <div class="card-footer">
+          <div style="display: flex">
+            <div v-if="created_at" class="date">
+              <img src="@/assets/icons/calendrier.png" alt="Calendar icon" class="icon" />
+              <p>{{ parseDate(created_at) }}</p>
+            </div>
+            <div v-if="collaborators && collaborators.length > 0" style="align-items: center; display: flex; margin-left: 10px">
+              <img src="@/assets/icons/collaborateurs.png" alt="Collaborateurs" class="icon" />
+              <div class="collaborateurs" style="display: flex; align-items: center;">
+                <img v-for="collaborator in collaborators.slice(0, 4)" v-bind:src="collaborator.avatar" alt="Collaborator logo" class="icon" :key="collaborator.name" />
+                <img v-if="collaborators.length > 3" src="@/assets/icons/plus.png" alt="more" class="icon" />
+              </div>
+            </div>
+          </div>
+          <div v-if="frameworks_langs && frameworks_langs.length > 0" class="frameworks_langs">
+            <img v-for="framework in frameworks_langs.slice(0, 6)" :key="framework" v-bind:src="chooseIcon(framework)" v-bind:alt="framework" class="icon" />
+            <img v-if="frameworks_langs.length > 5" src="@/assets/icons/plus.png" alt="more" class="icon" />
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
 import TagCard from "@/components/TagCard.vue";
+import moment from "moment";
+moment.locale("fr");
 export default {
   name: "ProjectCard",
   props: {
@@ -43,6 +63,18 @@ export default {
       type: Array,
       required: false,
     },
+    created_at: {
+      type: Number,
+      required: false,
+    },
+    collaborators: {
+      type: Array,
+      required: false,
+    },
+    id: {
+      type: Number,
+      required: true,
+    }
   },
   components: {
     TagCard,
@@ -61,6 +93,9 @@ export default {
         case "mongodb": return "https://i.imgur.com/NTYBYv4.png";
       }
       return "https://cdn.discordapp.com/avatars/692374264476860507/47dc8337803d2a8f284d2a6fdec829c6.png";
+    },
+    parseDate (date) {
+      return moment(date).format("DD/MM/YYYY");
     }
   }
 }
@@ -107,10 +142,26 @@ h3 {
   display: flex;
 }
 
-.frameworks_langs img {
+.icon {
   height: 35px;
   width: 35px;
   margin: 5px;
   border-radius: 100%;
+}
+
+.date p {
+  font-family: 'Nunito', sans-serif;
+  color: white;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  margin-right: 10px
+}
+
+.router-link {
+  text-decoration: none;
+  color: black;
 }
 </style>

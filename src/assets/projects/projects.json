@@ -23,13 +23,14 @@
       }
     ],
     "created_at": 1674052723809,
-    "otherDevs": [
+    "contributors": [
       {
         "name": "Cool Man",
         "github": "https://github.com/cool-man",
-        "avatar": "https://avatars.githubusercontent.com/u/6128107?s=200&v=4"
+        "avatar": "https://cdn.discordapp.com/avatars/692374264476860507/47dc8337803d2a8f284d2a6fdec829c6.png"
       }
-    ]
+    ],
+    "content": "# Hello World !\n\nThis is a test !\n\n```js\nconsole.log('Hello World !')\n```\nNotre Discord : https://discordapp.com/invite/HBherRA\n**Gras**\n> Commentaire\n\n*Italique*\n\n`Inline codeblock`"
   },
   {
     "id": 2,

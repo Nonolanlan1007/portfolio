@@ -1,7 +1,8 @@
 <template>
   <nav>
     <router-link to="/" class="router-link">Acceuil</router-link>
-    <router-link to="/projects" class="router-link">Projets</router-link>
+    <router-link to="/projets" class="router-link">Projets</router-link>
+    <a href="https://github.com/Nonolanlan1007" class="router-link" target="_blank">GitHub</a>
   </nav>
   <router-view/>
 </template>
@@ -12,6 +13,7 @@
 body {
   background: linear-gradient(270deg, #04354e, #0082ab);
   background-size: 400% 400%;
+  font-family: 'Nunito', sans-serif;
 
   -webkit-animation: AnimationName 19s ease infinite;
   -moz-animation: AnimationName 19s ease infinite;
