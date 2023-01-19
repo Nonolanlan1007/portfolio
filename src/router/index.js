@@ -3,6 +3,8 @@ import HomeView from "@/views/HomeView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
 import ProjectView from "@/views/ProjectView.vue";
 import Error404View from "@/views/Error404View.vue";
+import ProjectsWithTag from "@/views/ProjectsWithTag.vue";
+import ProjectsWithContributor from "@/views/ProjectsWithContributor.vue";
 
 const routes = [
     {
@@ -20,22 +22,27 @@ const routes = [
         meta: {
             title: 'Projets'
         }
-    },/*
+    },
     {
-        path: '/projets/tags/:tag',
+        path: '/projets/tag/:tag',
         name: 'ProjectsWithTag',
         component: ProjectsWithTag,
         meta: {
             title: 'Projets'
         }
-    },*/
+    },
     {
-        path: '/projets/:id',
+        path: '/projets/infos/:id',
         name: 'ProjectView',
         component: ProjectView,
         meta: {
             title: "Projet"
         }
+    },
+    {
+        path: "/projets/contributeur/:name",
+        name: "ProjectsWithContributor",
+        component: ProjectsWithContributor,
     },
     {
         path: "/404",

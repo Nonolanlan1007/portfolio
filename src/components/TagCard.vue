@@ -43,8 +43,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
 
   img {
-    max-width: 30px;
-    max-height: 30px;
+    width: 30px;
+    height: 30px;
     margin-left: 10px;
   }
 
@@ -63,11 +63,9 @@ export default {
     display: flex;
     border-radius: 1em;
     align-items: center;
-    justify-content: center;
-    align-content: center;
     padding: 5px;
     height: 35px;
-    margin-left: 10px;
+    margin-top: 10px;
     /*width: 175px;*/
   }
 

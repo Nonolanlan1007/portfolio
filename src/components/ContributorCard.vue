@@ -1,12 +1,12 @@
 <template>
-  <a v-bind:href="github || '/404'" class="router-link" target="_blank">
+  <router-link v-bind:to="`/projets/contributeur/${encodeURI(name)}`" class="router-link">
     <div class="tag" v-bind:style="{ 'background-color': this.$data.color }">
       <img v-if="logo" v-bind:src="logo" alt="Tag logo" class="logo" />
       <p>
         {{ name.toUpperCase() }}
       </p>
     </div>
-  </a>
+  </router-link>
 </template>
 
 <script>

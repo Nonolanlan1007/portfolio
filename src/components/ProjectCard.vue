@@ -1,5 +1,5 @@
 <template>
-  <router-link class="router-link" v-bind:to="`/projets/${String(id)}`">
+  <router-link class="router-link" v-bind:to="`/projets/infos/${String(id)}`">
     <div class="card">
       <img v-if="imgPath" v-bind:src="imgPath" alt="Project logo" class="logo" />
       <div class="card-content">
@@ -73,7 +73,7 @@ export default {
     },
     id: {
       type: Number,
-      required: true,
+      required: false,
     }
   },
   components: {
@@ -106,10 +106,15 @@ export default {
   border-radius: 1em;
   background-color: #bebebe;
   filter: opacity(0.6);
-  max-width: 50%;
   padding: 5px;
   margin: 10px;
   display: flex;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  border-radius: 2em;
+  filter: opacity(0.5);
 }
 
 .logo {

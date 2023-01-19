@@ -29,8 +29,7 @@
     "created_at": 1674052723809,
     "contributors": [
       {
-        "name": "Cool Man",
-        "github": "https://github.com/cool-man",
+        "name": "ValDesign22",
         "avatar": "https://cdn.discordapp.com/avatars/692374264476860507/47dc8337803d2a8f284d2a6fdec829c6.png"
       }
     ],
@@ -38,6 +37,22 @@
   },
   {
     "id": 2,
-    "name": "Awesome Project"
+    "name": "Awesome Project",
+    "tags": [
+      {
+        "name": "npm",
+        "color": "#CB3837",
+        "logo": "https://cdn.worldvectorlogo.com/logos/npm.svg"
+      },
+      {
+        "name": "cool project"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "ValDesign22",
+        "avatar": "https://cdn.discordapp.com/avatars/692374264476860507/47dc8337803d2a8f284d2a6fdec829c6.png"
+      }
+    ]
   }
 ]
