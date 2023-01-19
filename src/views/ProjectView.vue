@@ -109,7 +109,7 @@ export default {
 
     let langs = await getRepositoryLangs("https://github.com/Nonolanlan1007/portfolio")
     langs = langs.data
-
+    // eslint-disable-next-line
     let total = Object.entries(langs).reduce((acc, [key, value]) => acc + value, 0)
 
     let newLangs = []
