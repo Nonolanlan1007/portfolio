@@ -30,6 +30,12 @@
           <ContributorCard v-for="contributor in project.contributors" v-bind:name="contributor.name" v-bind:logo="contributor.avatar" v-bind:github="contributor.github" :key="contributor.name"></ContributorCard>
         </div>
       </div>
+      <div v-if="project.links.github && langs && langs.length > 0" class="langs">
+        <h2>
+          Composition du projet :
+        </h2>
+        <h3 v-for="lang in langs" v-bind:style="`color: ${lang.color}`" :key="lang.name">{{ lang.name }} : {{ lang.percent }}%</h3>
+      </div>
       <div v-if="project.links.website || project.links.github || project.links.docs || project.links.additional && project.links.additional.length > 0" class="infos-block">
         <h2>
           Liens :
@@ -71,14 +77,16 @@ import md from "md";
 import moment from "moment/moment";
 import TagCard from "@/components/TagCard.vue";
 import ContributorCard from "@/components/ContributorCard.vue";
-//import { getRepository } from "@/assets/scripts/githubAPI.js";
+import {getRepositoryLangs} from "@/assets/scripts/githubAPI";
+import githubColors from "@/assets/githubColors.json";
 
 export default {
   name: "ProjectView",
   data() {
     return {
       project: { name: "Cool Project" },
-      content: "Hello World"
+      content: "Hello World",
+      langs: []
     };
   },
   async created () {
@@ -98,6 +106,30 @@ export default {
         console.log(this.content)
       }
     }
+
+    let langs = await getRepositoryLangs("https://github.com/Nonolanlan1007/portfolio")
+    langs = langs.data
+
+    let total = Object.entries(langs).reduce((acc, [key, value]) => acc + value, 0)
+
+    let newLangs = []
+
+    for (const [key, value] of Object.entries(langs)) {
+      if (githubColors[key]) newLangs.push({ name: key, color: githubColors[key].color, percent: this.toPercent(total, value), value: value })
+      else {
+        const currentOthers = newLangs.find(lang => lang.name === "Autres")
+
+        if (currentOthers) {
+          currentOthers.value += value
+          currentOthers.percent = this.toPercent(total, currentOthers.value)
+          newLangs = newLangs.filter(lang => lang.name !== "Autres")
+          newLangs.push(currentOthers)
+        } else {
+          newLangs.push({ name: "Autres", color: "#000000", percent: this.toPercent(total, value), value: value })
+        }
+      }
+    }
+    this.langs = newLangs
   },
   methods: {
     chooseIcon (icon) {
@@ -116,7 +148,10 @@ export default {
     },
     parseDate (date) {
       return moment(date).format("DD/MM/YYYY");
-    }
+    },
+    toPercent (total, value) {
+      return Math.round((value*100)/total);
+    },
   },
   components: {
     TagCard,
@@ -244,5 +279,16 @@ export default {
   a:hover {
     color: white;
     text-decoration: none;
+  }
+
+  .langs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 1em;
+    padding: 1em;
+    margin: 15px;
   }
 </style>

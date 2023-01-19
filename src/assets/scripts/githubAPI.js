@@ -1,7 +1,12 @@
 import {Octokit} from 'octokit'
 
-export async function getRepository (url) {
-    return url
+export async function getRepositoryLangs (url) {
+    const octokit = login()
+    const [owner, repo] = url.split('/').slice(-2)
+    return await octokit.request('GET /repos/{owner}/{repo}/languages', {
+        owner,
+        repo
+    })
 }
 
 export async function getUser (username) {
