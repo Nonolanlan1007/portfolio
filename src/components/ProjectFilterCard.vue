@@ -10,7 +10,7 @@
     </div>
     <div v-if="contributors && contributors.length > 0" class="infos-block">
       <h2>
-        Contributeurs :
+        Filtrer par contributeurs :
       </h2>
       <div class="contributors">
         <ContributorCard v-for="contributor in contributors" v-bind:name="contributor.name" v-bind:logo="contributor.avatar" v-bind:github="contributor.github" :key="contributor.name"></ContributorCard>
