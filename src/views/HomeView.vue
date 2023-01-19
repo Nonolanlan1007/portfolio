@@ -7,6 +7,7 @@
         <div id="reseaux">
           <a href="https://github.com/Nonolanlan1007" target="_blank"><img src="@/assets/icons/github.png" alt="Github" height="50" width="50" class="icon"></a>
           <a href="https://discord.com/users/692374264476860507" target="_blank"><img src="@/assets/icons/discord.png" alt="Discord" height="50" width="50" class="icon"></a>
+          <a href="mailto:nolhan.dev@gmail.com" target="_blank"><img src="@/assets/icons/mail.png" alt="Mail" height="50" width="50" class="icon"></a>
         </div>
       </div>
     </div>

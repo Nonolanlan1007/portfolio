@@ -1,20 +1,20 @@
 <template>
-  <router-link v-bind:to="`/projets/tag/${encodeURI(name)}`" class="router-link">
-    <div class="tag" v-bind:style="{ 'background-color': this.$props.color || this.$data.Color }">
+  <a v-bind:href="github || '/404'" class="router-link" target="_blank">
+    <div class="tag" v-bind:style="{ 'background-color': this.$data.color }">
       <img v-if="logo" v-bind:src="logo" alt="Tag logo" class="logo" />
       <p>
         {{ name.toUpperCase() }}
       </p>
     </div>
-  </router-link>
+  </a>
 </template>
 
 <script>
 export default {
-  name: "TagCard",
+  name: "ContributorCard",
   data() {
     return {
-      Color: "#ff8000",
+      color: "#009dff",
     };
   },
   props: {
@@ -22,7 +22,7 @@ export default {
       type: String,
       required: true,
     },
-    color: {
+    github: {
       type: String,
       required: false,
     },
@@ -31,21 +31,15 @@ export default {
       required: false,
     },
   },
-  connected: () => {
-    if (this.$props.color) {
-      this.$data.Color = this.$props.color;
-    }
-  },
 }
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
-
   img {
     max-width: 30px;
     max-height: 30px;
     margin-left: 10px;
+    border-radius: 100%;
   }
 
   p {

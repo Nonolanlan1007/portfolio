@@ -8,9 +8,13 @@
     "links": {
       "website": "https://vuejs.org/",
       "github": "https://github.com/vuejs/core",
-      "npm": "https://www.npmjs.com/package/vue",
       "docs": "https://vuejs.org/v2/guide/",
-      "discord": "https://discordapp.com/invite/HBherRA"
+      "additional": [
+        {
+          "title": "NPM Module",
+          "link": "https://www.npmjs.com/package/vue"
+        }
+      ]
     },
     "tags": [
       {
