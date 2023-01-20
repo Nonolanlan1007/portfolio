@@ -218,12 +218,17 @@ export default {
     font-weight: bold;
     color: white;
   }
+
+  @media all and (max-width: 480px) {
+    .content * {
+      word-wrap:break-word;
+    }
+  }
 </style>
 
 <style scoped>
   .main {
     display: flex;
-    flex-direction: row;
     align-items: center;
     margin-top: 50px;
     margin-left: 50px;
@@ -319,5 +324,27 @@ export default {
   .date {
     display: flex;
     align-items: center;
+  }
+
+  @media all and (max-width: 480px) {
+    .main {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .infos {
+      width: auto;
+      margin-top: 50px;
+      margin-left: 0;
+      padding: 10px;
+    }
+
+    .langs {
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 15px;
+    }
   }
 </style>

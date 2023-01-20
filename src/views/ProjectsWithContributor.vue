@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex; align-items: center">
+  <div class="main">
     <div>
       <ProjectCard
           v-for="contribution in contributions"
@@ -87,37 +87,51 @@ export default {
 </script>
 
 <style scoped>
-.infos {
-  border-radius: 1em;
-  background-color: #bebebe;
-  filter: opacity(0.6);
-  padding: 15px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin: 10px;
-  margin-top: 50px;
-  display: flex;
-}
+  .infos {
+    border-radius: 1em;
+    background-color: #bebebe;
+    filter: opacity(0.6);
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 10px;
+    margin-top: 50px;
+    display: flex;
+  }
 
-.circle {
-  border-radius: 100%;
-}
+  .circle {
+    border-radius: 100%;
+  }
 
-.content {
-  margin-left: 20px;
-  margin-top: 20px;
-}
+  .content {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
 
-.icon {
-  height: 35px;
-  width: 35px;
-  margin: 5px;
-  border-radius: 100%;
-}
+  .icon {
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+    border-radius: 100%;
+  }
 
-.flex {
-  display: flex;
-  align-items: center;
-  margin: 15px;
-}
+  .flex {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+  }
+
+  @media all and (max-width: 480px) {
+    .main {
+      display: block;
+    }
+    .infos {
+      display: block;
+    }
+  }
 </style>
