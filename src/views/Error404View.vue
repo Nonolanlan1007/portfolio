@@ -48,4 +48,14 @@ export default {
     height: 50px;
     margin-right: 10px;
   }
+
+  @media all and (max-width: 480px) {
+    h1 {
+      font-size: 50px;
+    }
+
+    .button {
+      font-size: 25px;
+    }
+  }
 </style>

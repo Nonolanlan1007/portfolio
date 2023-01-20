@@ -42,9 +42,6 @@ body {
   100%{background-position:0% 50%}
 }
 
-/*body {
-  background: linear-gradient(to right bottom, #0082AB, #04354E) fixed no-repeat
-}*/
 nav {
   text-align: center;
   margin-top: 25px;

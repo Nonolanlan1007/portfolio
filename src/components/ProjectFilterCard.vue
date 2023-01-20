@@ -71,7 +71,7 @@ export default {
     padding-right: 25px;
     margin: 10px;
     margin-top: 50px;
-    max-width: 25%;
+    width: 25%;
   }
   .tags {
     display: flex;
@@ -80,5 +80,13 @@ export default {
   .contributors {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @media all and (max-width: 480px) {
+    div.main {
+      width: auto;
+      margin: 0;
+      padding: 15px;
+    }
   }
 </style>

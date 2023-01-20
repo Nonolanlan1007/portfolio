@@ -13,7 +13,7 @@
           {{ description.length > 200 ? description.slice(0, 201) + "..." : description }}
         </h3>
         <div class="card-footer">
-          <div style="display: flex">
+          <div class="dateAndContributors">
             <div v-if="created_at" class="date">
               <div class="btn btn-primary tooltip"><img src="@/assets/icons/calendrier.png" alt="Calendar icon" class="icon" />
                 <div class="top">
@@ -132,71 +132,97 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  border-radius: 1em;
-  background-color: #bebebe;
-  filter: opacity(0.6);
-  padding: 5px;
-  margin: 10px;
-  display: flex;
-  transition: all 0.2s ease-in-out;
-}
+  .card {
+    border-radius: 1em;
+    background-color: #bebebe;
+    filter: opacity(0.6);
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+  }
 
-.card:hover {
-  border-radius: 2em;
-  filter: opacity(0.5);
-}
+  .card:hover {
+    border-radius: 2em;
+    filter: opacity(0.5);
+  }
 
-.logo {
-  width: 250px;
-  height: 250px;
-  margin: 10px;
-  border-radius: 100%;
-  background: linear-gradient(270deg, #04354e, #0082ab);
-  background-size: 400% 400%;
+  .logo {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 100%;
+    background: linear-gradient(270deg, #04354e, #0082ab);
+    background-size: 400% 400%;
 
-  -webkit-animation: AnimationName 19s ease infinite;
-  -moz-animation: AnimationName 19s ease infinite;
-  -o-animation: AnimationName 19s ease infinite;
-  animation: AnimationName 19s ease infinite;
-}
+    -webkit-animation: AnimationName 19s ease infinite;
+    -moz-animation: AnimationName 19s ease infinite;
+    -o-animation: AnimationName 19s ease infinite;
+    animation: AnimationName 19s ease infinite;
+  }
 
-.card-content {
-  margin: 20px;
-}
+  .card-content {
+    margin: 20px;
+  }
 
-.tags {
-  display: flex;
-}
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-h3 {
-  font-family: 'Sofia Sans Condensed', sans-serif;
-}
+  h3 {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+  }
 
-.frameworks_langs {
-  display: flex;
-}
+  .frameworks_langs {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.icon {
-  height: 35px;
-  width: 35px;
-  margin: 5px;
-  border-radius: 100%;
-}
+  .icon {
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+    border-radius: 100%;
+  }
 
-.date p {
-  font-family: 'Nunito', sans-serif;
-  color: white;
-}
+  .date p {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+  }
 
-.date {
-  display: flex;
-  align-items: center;
-  margin-right: 10px
-}
+  .date {
+    display: flex;
+    align-items: center;
+    margin-right: 10px
+  }
 
-.router-link {
-  text-decoration: none;
-  color: black;
-}
+  .router-link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .dateAndContributors {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  @media all and (max-width: 480px) {
+    .logo {
+      width: 150px;
+      height: 150px;
+    }
+    .card {
+      display: block
+    }
+
+    div {
+      border: aqua solid;
+    }
+
+    .card-content {
+      margin: 0;
+    }
+  }
 </style>

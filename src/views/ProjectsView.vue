@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex; width: 100%">
+  <div class="flex">
     <div class="main">
       <ProjectCard
           v-for="project in projects"
@@ -46,5 +46,22 @@ export default {
     margin-left: 50px;
     margin-right: 50px;
     width: 50%;
+  }
+
+  .flex {
+    display: flex;
+    width: 100%;
+  }
+
+  @media all and (max-width: 480px) {
+    .main {
+      margin-left: 0;
+      margin-right: 0;
+      width: auto;
+    }
+
+    .flex {
+      display: block;
+    }
   }
 </style>

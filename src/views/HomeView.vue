@@ -72,7 +72,6 @@ export default {
     margin-left: 100px;
     margin-top: 150px;
     border-radius: 10%;
-    /*background-color: #04354E;*/
     padding: 25px;
   }
 
@@ -95,5 +94,38 @@ export default {
 
   .icon:hover {
     filter: brightness(0.7);
+  }
+  
+  @media all and (max-width: 480px) {
+    * {
+      align-items: center;
+      justify-content: center;
+    }
+
+    #me {
+      display: block;
+      margin-left: 0;
+      margin-top: 100px;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+    }
+
+    #me * {
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #reseaux {
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    #reseaux * {
+      margin: 15px;
+    }
   }
 </style>
