@@ -30,7 +30,8 @@
     "contributors": [
       {
         "name": "ValDesign22",
-        "avatar": "https://cdn.discordapp.com/avatars/692374264476860507/47dc8337803d2a8f284d2a6fdec829c6.png"
+        "github": "ValDesign22",
+        "avatar": "https://avatars.githubusercontent.com/u/73596429?v=4"
       }
     ],
     "content": "# Hello World !\n\nThis is a test !\n\n```js\nconsole.log('Hello World !')\n```\nNotre Discord : https://discordapp.com/invite/HBherRA\n**Gras**\n> Commentaire\n\n*Italique*\n\n`Inline codeblock`"
@@ -51,7 +52,7 @@
     "contributors": [
       {
         "name": "ValDesign22",
-        "avatar": "https://cdn.discordapp.com/avatars/692374264476860507/47dc8337803d2a8f284d2a6fdec829c6.png"
+        "avatar": "https://i.imgur.com/fNzvHhm.png"
       }
     ]
   }

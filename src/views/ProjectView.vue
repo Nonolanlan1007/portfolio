@@ -10,8 +10,24 @@
         <h3 v-if="project && project.description">
           {{ project.description }}
         </h3>
+        <div v-if="project.created_at" class="date">
+          <div class="btn btn-primary tooltip"><img src="@/assets/icons/calendrier.png" alt="Date" class="icon" />
+            <div class="top">
+              <h3>Date de création</h3>
+              <i></i>
+            </div>
+          </div>
+          <h3>{{ parseDate(project. created_at) }}</h3>
+        </div>
         <div v-if="project.langs_frameworks && project.langs_frameworks.length > 0" class="frameworks_langs">
-          <img v-for="framework in project.langs_frameworks" :key="framework" v-bind:src="chooseIcon(framework)" v-bind:alt="framework" class="icon" />
+          <div v-for="framework in project.langs_frameworks" :key="framework" class="frameworks_langs">
+            <div class="btn btn-primary tooltip"><img v-bind:src="chooseIcon(framework)" v-bind:alt="framework" class="icon" />
+              <div class="top">
+                <h3>{{ framework }}</h3>
+                <i></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div v-if="project.tags" class="infos-block">
@@ -144,7 +160,7 @@ export default {
         case "typescript": return "https://i.imgur.com/XRRobsJ.png";
         case "mongodb": return "https://i.imgur.com/NTYBYv4.png";
       }
-      return "https://cdn.discordapp.com/avatars/692374264476860507/47dc8337803d2a8f284d2a6fdec829c6.png";
+      return "https://i.imgur.com/fNzvHhm.png";
     },
     parseDate (date) {
       return moment(date).format("DD/MM/YYYY");
@@ -290,5 +306,18 @@ export default {
     border-radius: 1em;
     padding: 1em;
     margin: 15px;
+  }
+
+  .frameworks_langs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .date {
+    display: flex;
+    align-items: center;
   }
 </style>

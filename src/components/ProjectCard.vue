@@ -15,20 +15,50 @@
         <div class="card-footer">
           <div style="display: flex">
             <div v-if="created_at" class="date">
-              <img src="@/assets/icons/calendrier.png" alt="Calendar icon" class="icon" />
+              <div class="btn btn-primary tooltip"><img src="@/assets/icons/calendrier.png" alt="Calendar icon" class="icon" />
+                <div class="top">
+                  <h3>Date de création</h3>
+                  <i></i>
+                </div>
+              </div>
               <p>{{ parseDate(created_at) }}</p>
             </div>
             <div v-if="collaborators && collaborators.length > 0" style="align-items: center; display: flex; margin-left: 10px">
-              <img src="@/assets/icons/collaborateurs.png" alt="Collaborateurs" class="icon" />
+              <div class="btn btn-primary tooltip"><img src="@/assets/icons/collaborateurs.png" alt="Collaborateurs" class="icon" />
+                <div class="top">
+                  <h3>Collaborateurs</h3>
+                  <i></i>
+                </div>
+              </div>
               <div class="collaborateurs" style="display: flex; align-items: center;">
-                <img v-for="collaborator in collaborators.slice(0, 4)" v-bind:src="collaborator.avatar" alt="Collaborator logo" class="icon" :key="collaborator.name" />
-                <img v-if="collaborators.length > 3" src="@/assets/icons/plus.png" alt="more" class="icon" />
+                <div v-for="collaborator in collaborators.slice(0, 4)" :key="collaborator.name" class="btn btn-primary tooltip"><img v-bind:src="collaborator.avatar" alt="Collaborator logo" class="icon" />
+                  <div class="top">
+                    <h3>{{ collaborator.name }}</h3>
+                    <i></i>
+                  </div>
+                </div>
+                <div v-if="collaborators.length > 3" class="btn btn-primary tooltip"><img src="@/assets/icons/plus.png" alt="more" class="icon" />
+                  <div class="top">
+                    <h3>Sélectionnez le projet pour voir tous les collaborateurs.</h3>
+                    <i></i>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div v-if="frameworks_langs && frameworks_langs.length > 0" class="frameworks_langs">
-            <img v-for="framework in frameworks_langs.slice(0, 6)" :key="framework" v-bind:src="chooseIcon(framework)" v-bind:alt="framework" class="icon" />
-            <img v-if="frameworks_langs.length > 5" src="@/assets/icons/plus.png" alt="more" class="icon" />
+            <div v-for="framework in frameworks_langs.slice(0, 6)" :key="framework" class="btn btn-primary tooltip"><img v-bind:src="chooseIcon(framework)" v-bind:alt="framework" class="icon" />
+              <div class="top">
+                <h3>{{ framework }}</h3>
+                <i></i>
+              </div>
+            </div>
+            <div v-if="frameworks_langs.length > 5" class="btn btn-primary tooltip"><img src="@/assets/icons/plus.png" alt="more" class="icon" />
+              <div class="top">
+                <h3>Sélectionnez le projet pour voir tous les langages/frameworks utilisés.</h3>
+                <i></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -92,7 +122,7 @@ export default {
         case "typescript": return "https://i.imgur.com/XRRobsJ.png";
         case "mongodb": return "https://i.imgur.com/NTYBYv4.png";
       }
-      return "https://cdn.discordapp.com/avatars/692374264476860507/47dc8337803d2a8f284d2a6fdec829c6.png";
+      return "https://i.imgur.com/fNzvHhm.png";
     },
     parseDate (date) {
       return moment(date).format("DD/MM/YYYY");

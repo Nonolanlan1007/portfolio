@@ -19,10 +19,20 @@
     <div class="infos">
       <img v-bind:src="githubProfile.avatar_url" alt="Avatar" class="circle" height="200" width="200" />
       <div class="content">
-        <h1>{{ githubProfile.login }}{{ githubProfile.name ? ` (${githubProfile.name})` : ""}}</h1>
+        <div class="btn btn-primary tooltip"><h1>{{ githubProfile.login }}</h1>
+          <div class="top">
+            <h3>{{ githubProfile.name || githubProfile.login }}</h3>
+            <i></i>
+          </div>
+        </div>
         <h3>{{ githubProfile.bio }}</h3>
         <div v-if="githubProfile.location" class="flex">
-          <img src="@/assets/icons/emplacement.png" alt="Emplacement" class="icon" />
+          <div class="btn btn-primary tooltip"><img src="@/assets/icons/emplacement.png" alt="Emplacement" class="icon" />
+            <div class="top">
+              <h3>Localisation</h3>
+              <i></i>
+            </div>
+          </div>
           <h3>{{ githubProfile.location }}</h3>
         </div>
         <div class="flex">
@@ -68,6 +78,8 @@ export default {
         }
       });
     })
+
+    if (allContributions.length === 0) this.$router.push({ name: "NotFound" });
 
     this.$data.contributions = allContributions;
   }
