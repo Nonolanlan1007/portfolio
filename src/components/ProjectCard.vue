@@ -208,7 +208,7 @@ export default {
     flex-wrap: wrap;
   }
 
-  @media all and (max-width: 480px) {
+  @media all and (max-width: 1000px) {
     .logo {
       width: 150px;
       height: 150px;

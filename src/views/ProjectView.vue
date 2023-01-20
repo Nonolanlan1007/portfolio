@@ -219,7 +219,7 @@ export default {
     color: white;
   }
 
-  @media all and (max-width: 480px) {
+  @media all and (max-width: 1000px) {
     .content * {
       word-wrap:break-word;
     }
@@ -326,7 +326,7 @@ export default {
     align-items: center;
   }
 
-  @media all and (max-width: 480px) {
+  @media all and (max-width: 1000px) {
     .main {
       display: block;
       margin-left: 0;

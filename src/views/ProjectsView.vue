@@ -53,7 +53,7 @@ export default {
     width: 100%;
   }
 
-  @media all and (max-width: 480px) {
+  @media all and (max-width: 1000px) {
     .main {
       margin-left: 0;
       margin-right: 0;
