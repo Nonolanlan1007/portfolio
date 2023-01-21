@@ -20,7 +20,7 @@
         }
     ],
     "imgPath": "https://cdn.discordapp.com/avatars/782667133716791316/645a75d5aebbd0ff2e57f3bd745ffdc9.png?size=4096",
-    "description": "YopBot est un robot Discord permettant la mise en place d’une lisee pour aider les développeurs à promouvoir leur robot.",
+    "description": "YopBot est un robot Discord permettant la mise en place d’une liste pour aider les développeurs à promouvoir leur robot.",
     "langs_frameworks": ["typescript", "mongodb"],
     "links": {
         "website": "https://yopbotlist.me",
