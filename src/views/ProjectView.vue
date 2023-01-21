@@ -123,29 +123,31 @@ export default {
       }
     }
 
-    let langs = await getRepositoryLangs("https://github.com/Nonolanlan1007/portfolio")
-    langs = langs.data
-    // eslint-disable-next-line
-    let total = Object.entries(langs).reduce((acc, [key, value]) => acc + value, 0)
+    if (project.links.github) {
+      let langs = await getRepositoryLangs(project.links.github)
+      langs = langs.data
+      // eslint-disable-next-line
+      let total = Object.entries(langs).reduce((acc, [key, value]) => acc + value, 0)
 
-    let newLangs = []
+      let newLangs = []
 
-    for (const [key, value] of Object.entries(langs)) {
-      if (githubColors[key]) newLangs.push({ name: key, color: githubColors[key].color, percent: this.toPercent(total, value), value: value })
-      else {
-        const currentOthers = newLangs.find(lang => lang.name === "Autres")
+      for (const [key, value] of Object.entries(langs)) {
+        if (githubColors[key]) newLangs.push({ name: key, color: githubColors[key].color, percent: this.toPercent(total, value), value: value })
+        else {
+          const currentOthers = newLangs.find(lang => lang.name === "Autres")
 
-        if (currentOthers) {
-          currentOthers.value += value
-          currentOthers.percent = this.toPercent(total, currentOthers.value)
-          newLangs = newLangs.filter(lang => lang.name !== "Autres")
-          newLangs.push(currentOthers)
-        } else {
-          newLangs.push({ name: "Autres", color: "#000000", percent: this.toPercent(total, value), value: value })
+          if (currentOthers) {
+            currentOthers.value += value
+            currentOthers.percent = this.toPercent(total, currentOthers.value)
+            newLangs = newLangs.filter(lang => lang.name !== "Autres")
+            newLangs.push(currentOthers)
+          } else {
+            newLangs.push({ name: "Autres", color: "#000000", percent: this.toPercent(total, value), value: value })
+          }
         }
       }
+      this.langs = newLangs
     }
-    this.langs = newLangs
   },
   methods: {
     chooseIcon (icon) {
