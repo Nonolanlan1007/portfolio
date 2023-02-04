@@ -26,7 +26,7 @@
         "website": "https://yopbotlist.me",
         "github": "https://github.com/Yop-BotList/bot"
     },
-    "created_at": 1607036400,
+    "created_at": 1606777200,
     "content": "# YopBot\n\nRobot Discord conçu pour les serveurs botlist.\n\n\n## Qu’est-ce qu’un botlist ?\n\nC’est tout simplement un système qui permet à des développeurs de faire connaître leur projet de robot Discord au travers d’une liste publique et participative !\n\n\n### Publique ?\n\nEn effet, même les personnes qui ne sont pas des développeurs peuvent y accéder pour trouver le robot de leurs rêves !\n\n\n### Participative ?\n\nEh oui ! Tout le monde peut ajouter son projet librement !\n\n\n## Et YopBot dans tout ça ?\n\nYopBot peut être considéré comme un assistant. C’est lui qui gère l’entièreté du serveur et de la liste ! Il permet aux développeurs d’ajouter leur robot, de personnaliser son profil et j’en passe !\n\n\n## Rapide tour des fonctionnalités :\n\n* Modération : Histoire que tous le monde ne puisse pas faire ce qu’il veut !\n\n* Profils : Profils entièrement personnalisables avec par exemple une description, un site ou encore un serveur support !\n\n* Gestion d’une équipe de développement en cas que vous ayez des assistants.\n\n* Système de report de bugs : un utilisateur trouve un bug et vous le fait parvenir par l’intermédiaire de YopBot.\n\n* Le compteur : 1, 2, 3, 4, 5...\n\n\n## Avantages :\n\n* Flexibilité & adaptation\n\n* Prise en main et installation facile\n\n* Open Source\n\n* Peut être relié à une site\n\n\n\nAlors ? Qu’attends-tu pour lancer ton botlist ?"
   },
   {
@@ -48,6 +48,28 @@
         "github": "https://github.com/Nonolanlan1007/PufferBot"
     },
     "content": "# PufferBot\n\n\nPufferBot est un robot Discord qui vous permet de proposer aux utilisateurs de votre serveur des services d’hébergements 100% automatisés ! Relié avec le panneau de jeu PufferPanel (https://pufferpanel.com), il sera votre meilleur atout pour gagner du temps ! Créer vos articles, définissez-leur un prix, ajoutez un peu de stock et c’est tout !\nVos utilisateurs pourrons ensuite les acheter avec des crédits (à vous d’automatiser cela car pour l’instant, vous pouvez juste ajouter des crédits à vos membres avec un commande). Une fois leur service livré (dans les 5 secondes), ils n’auront qu’à se connecter au PufferPanel une fois pour importer leurs fichier ! Tout le reste fonctionne directement depuis Discord.\n\nVoici quelques fonctionnalités supplémentaires de PufferBot :\n* Commandes administratives pour voir des informations sur les utilisateurs et leurs serveurs.\n* Allumage/Installation/Arrêt des serveurs depuis Discord.\n* Récupération de la console sur Discord. \n* Possibilité de modifier son service en passant à un autre (à prix égal).\n* Renouvellement automatique si la solde de crédits est suffisante.\n* Possibilités de résiliation (avec possibilité d’annulation jusqu’à la date d’expiration).\n* Entièreté des actions importantes envoyées dans un salon configuré !\n\n\nCe projet m’a pris 2 semaines à réaliser. Il a été entièrement fait en TypeScript avec DiscordJS et l’API de PufferPanel.\n\n\n### Rappel\nPufferBot n'est pas affilié avec PufferPanel. PufferPanel est un projet open-source que vous pouvez retrouver à l'adresse suivante : https://github.com/PufferPanel/PufferPanel.",
-    "created_at": 1672786800
+    "created_at": 1672527600
+  },
+  {
+    "id": 3,
+    "name": "JokeMan",
+    "tags": [
+      {
+        "name": "Bot Discord",
+        "color": "#5865F2",
+        "logo": "https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6cc3c481a15a141738_icon_clyde_white_RGB.png"
+      },
+      {
+          "name": "open-source"
+      }
+    ],
+    "description": "JokeMan est un robot Discord qui envoie aléatoirement une blague dans un serveur !",
+    "langs_frameworks": ["typescript"],
+    "links": {
+        "github": "https://github.com/Nonolanlan1007/JokeMan"
+    },
+    "content": "JokeMan est un robot Discord qui envoie aléatoirement une blague dans un serveur !",
+    "created_at": 1657404000
   }
 ]
+
