@@ -26,7 +26,7 @@
         "website": "https://yopbotlist.me",
         "github": "https://github.com/Yop-BotList/bot"
     },
-    "created_at": 1607036400
+    "created_at": 1607036400,
     "content": "# YopBot\n\nRobot Discord conçu pour les serveurs botlist.\n\n\n## Qu’est-ce qu’un botlist ?\n\nC’est tout simplement un système qui permet à des développeurs de faire connaître leur projet de robot Discord au travers d’une liste publique et participative !\n\n\n### Publique ?\n\nEn effet, même les personnes qui ne sont pas des développeurs peuvent y accéder pour trouver le robot de leurs rêves !\n\n\n### Participative ?\n\nEh oui ! Tout le monde peut ajouter son projet librement !\n\n\n## Et YopBot dans tout ça ?\n\nYopBot peut être considéré comme un assistant. C’est lui qui gère l’entièreté du serveur et de la liste ! Il permet aux développeurs d’ajouter leur robot, de personnaliser son profil et j’en passe !\n\n\n## Rapide tour des fonctionnalités :\n\n* Modération : Histoire que tous le monde ne puisse pas faire ce qu’il veut !\n\n* Profils : Profils entièrement personnalisables avec par exemple une description, un site ou encore un serveur support !\n\n* Gestion d’une équipe de développement en cas que vous ayez des assistants.\n\n* Système de report de bugs : un utilisateur trouve un bug et vous le fait parvenir par l’intermédiaire de YopBot.\n\n* Le compteur : 1, 2, 3, 4, 5...\n\n\n## Avantages :\n\n* Flexibilité & adaptation\n\n* Prise en main et installation facile\n\n* Open Source\n\n* Peut être relié à une site\n\n\n\nAlors ? Qu’attends-tu pour lancer ton botlist ?"
   },
   {
