@@ -10,6 +10,7 @@
           "name": "open-source"
       }
     ],
+    "imgPath": "https://i.imgur.com/mTcqN08.png",
     "description": "Le site sur lequel tu te trouve !",
     "langs_frameworks": ["vuejs"],
     "links": {
@@ -100,6 +101,7 @@
     ],
     "description": "Un petit morpion assez simpliste",
     "langs_frameworks": ["html", "css", "javascript"],
+    "imgPath": "https://i.imgur.com/6ZZDT1t.png",
     "links": {
         "github": "https://github.com/Nonolanlan1007/morpion",
         "website": "https://morpion.is-an.app"
