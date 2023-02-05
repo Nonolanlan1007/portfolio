@@ -108,6 +108,23 @@
     },
     "content": "Un morpion extrêment basique créé en cours en HTML, CSS et JS sans aucun framework :)",
     "created_at": "02/01/2023"
+  },
+  {
+    "id": 6,
+    "name": "Lampe mindstorm",
+    "tags": [
+      {
+        "name": "Mindstorm"
+      }
+    ],
+    "description": "Transformez votre lego en un lampe !",
+    "langs_frameworks": [],
+    "imgPath": "https://github.com/Nonolanlan1007/mindstorm-lamp/blob/3e889c00926f71e53a94539fa6691bebddfb7d0f/mindstorm%20lamp.JPG",
+    "links": {
+        "github": "https://github.com/Nonolanlan1007/mindstorm-lamp"
+    },
+    "content": "# Mindstorm lamp\nMake your mindstorm more useful by turning it into a lamp !\n\n## What you need\n- [An EV3 mindstorm pack (31313)](https://www.lego.com/fr-fr/product/lego-mindstorms-ev3-31313)\n- A computer with [Visual Studio Code](https://code.visualstudio.com/) and [EV3 MicroPython extension](https://marketplace.visualstudio.com/items?itemName=lego-education.ev3-micropython) installed\n- An SD card with the [EV3 MicroPython firmware](https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3) installed\n- A [Lamp kit](https://www.amazon.com/Extension-Hanging-Q-Plusmore-Pendant-Livingroom/dp/B07ZW13PJX/) (it's an example, you can use any kit you want)\n\n## How to build it\n- Build the lamp with the [building instructions](https://drive.google.com/file/d/1POIGR2eg_fm1Xu4P3GHdnfxv2BNngUVP/view?usp=sharing) or the [3d model](https://github.com/Nonolanlan1007/mindstorm-lamp/blob/aa8e923b3ba257811f8e68e77c1d1681dd9fd782/3d%20model%20lamp.io) (use [Bricklink Studio 2.0](https://www.bricklink.com/v3/studio/download.page) to open it)\n- Connect the motor and the infrared sensor to the EV3 brick\n- Connect the EV3 brick to your computer\n- Clone the repo and open it with Visual Studio Code\n- Connect the brick with the EV3 MicroPython extension and upload the code.\n- Enjoy your lamp !\n## How to use it\nStart the `main.py` file on the brick.\n\n## Controls\n### With the remote control\n- Press the top button on the remote control to turn on the lamp\n\n### With the brick\n- Press the center button to turn on the lamp\n- Press the up button to enabled/disable the remote control\n\n### Note\n\nIf remote control is enabled, the center button will not work.\n\n## Issue\nIf you have any issue, please open an issue by [clicking here](https://github.com/Nonolanlan1007/mindstorm-lamp/issues/new).\n\n\n![Mindstorm lamp](https://github.com/Nonolanlan1007/mindstorm-lamp/blob/3e889c00926f71e53a94539fa6691bebddfb7d0f/mindstorm%20lamp.JPG)",
+    "created_at": "05/01/2023"
   }
 ]
 
