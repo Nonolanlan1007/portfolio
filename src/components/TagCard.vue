@@ -46,6 +46,7 @@ export default {
     width: 30px;
     height: 30px;
     margin-left: 10px;
+    border-radius: 1em;
   }
 
   p {
