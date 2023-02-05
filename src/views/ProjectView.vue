@@ -161,6 +161,7 @@ export default {
         case "css": return "https://i.imgur.com/YqExwBg.png";
         case "typescript": return "https://i.imgur.com/XRRobsJ.png";
         case "mongodb": return "https://i.imgur.com/NTYBYv4.png";
+        case "python": return "https://i.imgur.com/6Z3TtRh.png";
       }
       return "https://i.imgur.com/fNzvHhm.png";
     },
