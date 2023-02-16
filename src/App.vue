@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <router-link to="/" class="router-link">Acceuil</router-link>
+    <router-link to="/" class="router-link">Accueil</router-link>
     <router-link to="/projets" class="router-link">Projets</router-link>
     <a href="https://github.com/Nonolanlan1007" class="router-link" target="_blank">GitHub</a>
   </nav>
